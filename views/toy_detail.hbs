@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toy Detail</title>
+</head>
+<body>
+    <div class="container col-md-8 mt-3 mb-3">
+    <div class="row">
+        <div class="col">
+            <h2>{{ toy.name }}</h2>
+            <iframe width="500" height="500" src="https://www.youtube.com/embed/{{ toy.video }}">
+            </iframe>
+        </div>
+        <div class="col">
+            <table class="table table-bordered">
+            <tr>
+                <th colspan="2">TOY INFORMATION</th>
+            </tr>
+            <tr>
+                <th>Brand</th>
+                <td>{{ toy.brand }}</td>
+            </tr>
+            <tr>
+                <th>Source</th>
+                <td>{{ toy.source }}</td>
+            </tr>
+            <tr>
+                <th>Price</th>
+                <td>${{ toy.price }}</td>
+            </tr>
+            <tr >
+                <img src="{{ toy.image }}" width="200" height="200">
+            </tr>
+            </table>
+        </div>
+   </div>
+</div>
+</body>
+</html>

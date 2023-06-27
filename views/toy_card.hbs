@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container text-center mt-3 mb-3">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container px-4 px-lg-5">
+                <a class="navbar-brand" href="/">Homepage!</a>
+                <p class="text-center text-black"><i>Welcome to ATN Store – your #1 hotspot for brilliant toys, infant items, diversions, kids’ books and music, stationary utilities, and more.
+                                                     We’re committed to giving you the plain best with attention to the most astounding quality, unwavering quality, client administration, and uniqueness.
+                                                     After its establishment, ATN made considerable progress in the past 10+ years. Presently, we’ve 10 toy shops in various areas.We have an arrangement 
+                                                     for extending crosswise over Vietnam. On the off chance that you’re keen on collaborating with us for an establishment store, you’re most free to apply for it here.
+                                                     We convey items crosswise over Vietnam through our numerous distribution centers and retail accomplices.</i></p>
+            </div>
+        </nav>
+    </div>
+    <section class="py-5">
+        <div class="container px-4 px-lg-5 mt-5">
+            <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+                {{#each toys}}
+                <div class="col mb-5">
+                    <div class="card h-100">
+                        <a href="/detail/{{ _id }}">
+                            <img class="card-img-top mt-3" src="{{ image }}" width="500" height="300">
+                        </a>
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <h6 class="fw-bolder"><i>{{ name }}</i></h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {{/each}}
+            </div>
+        </div>
+    </section>
+</div>
+</body>
+</html>

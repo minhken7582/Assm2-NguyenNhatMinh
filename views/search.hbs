@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Toy</title>
+</head>
+<body>
+    <div class="container text-center mt-3 mb-3">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container px-4 px-lg-5">
+                <a class="navbar-brand" href="/all">Homepage!</a>
+            </div>
+        </nav>
+    </div>
+    <div class="container text-center mt-3 mb-3">
+        <table class="table table-dark table-striped">
+            <tr>
+                <th colspan="9">Search Toys</th>
+            </tr>    
+            <tr>
+                <th>Name</th>
+                <th>Brand</th>
+                <th>Source</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>Image</th>
+                <th>Video</th>
+                <th>Category</th>
+                <th></th>
+            </tr>
+            {{#each toys }}
+            <tr>
+                <th>{{ name }}</th>
+                <th>{{ brand }}</th>
+                <th>{{ source }}</th>
+                <th>{{ price }} $</th>
+                <th>{{ quantity }}</th>
+                <th>
+                    <img src="{{ image }}" width="150" height="150">
+                </th>
+                <th>
+                    <iframe src="https://www.youtube.com/embed/{{ video }}" width="220" height="160"></iframe>
+                </th>
+                <th>{{ category }}</th>
+                <th>
+                    <a class="btn btn-warning" href="/edit/{{_id}}">Edit</a>
+                    <a class="btn btn-danger" href="/delete/{{_id}}" onclick="return confirm('Are you sure to delete this toy?');">Delete</a> 
+                </th>
+            </tr>
+            {{/each}}
+        </table>
+    </div>
+</body>
+</html>

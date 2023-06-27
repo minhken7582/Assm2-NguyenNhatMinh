@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Toy</title>
+</head>
+<body>
+    <div class="container">
+        <span class="border border-primary">
+            <form class="bg-light text-center" style="margin: auto; width: 450px;" action="/edit/{{toy._id}}" method="post">
+            <div>
+                <h1 class="text text-primary">Edit Toy</h1>
+            </div>
+            <div class="form-group mt-3">
+                <label class="text text-success">Name</label>
+                <input class="form-control" type="text" name="name" value="{{ toy.name }}" required>
+            </div>
+            <div class="form-group mt-3">
+                <label class="text text-success">Brand</label>
+                <input class="form-control" type="text" name="brand" value="{{ toy.brand }}" required>
+            </div>
+                <div class="form-group mt-3">
+                <label class="text text-success">Source</label>
+                <input class="form-control" type="text" name="source" value="{{ toy.source }}" required>
+            </div>
+            <div class="form-group mt-3">
+                <label class="text text-success">Price</label>
+                <input class="form-control" type="number" name="price" value="{{ toy.price }}" required>
+            </div>
+            <div class="form-group mt-3">
+                <label class="text text-success">Quantity</label>
+                <input class="form-control" type="number" name="quantity" value="{{ toy.quantity }}" required>
+            </div>
+            <div class="form-group mt-3">
+                <label class="text text-success">Image</label><br>
+                <img src="{{ toy.image }}" width="200" height="200"><br>
+                <input class="form-control" type="text" name="image" value="{{ toy.image }}" required>
+            </div>
+            <div class="form-group mt-3">
+                <label class="text text-success">Video</label><br>
+                <iframe src="https://www.youtube.com/embed/{{ toy.video }}" width="200" height="150"></iframe>
+                <input class="form-control" type="text" name="video" value="{{ toy.video }}" required>
+            </div>
+                <div class="form-group mt-3">
+                <label class="text text-success">Category</label>
+                <input class="form-control" type="text" name="category" value="{{ toy.category }}" required>
+            </div>
+            <div class="form-group mt-3">
+                <input class="btn btn-success" style="width: 150px;" type="submit" value="Edit">
+            </div>
+            </form>
+        </span>
+    </div>
+</body>
+</html>
